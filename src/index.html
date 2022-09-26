@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet" />
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ION Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS  -->
+    <script defer src="script.js"></script>
+    <!-- CSS Output -->
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>Le Diamonds</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+        data-aos-duration="300"
+        class="h-[95px] flex items-center border-b-[1px] justify-between xl:border-0 xl:shadow-md sticky top-0 w-full z-10 bg-white">
+        <img
+          class="max-w-[191px] max-h-[34px] mx-9 xl:mx-[85px]"
+          src="/assets/icon/logo.svg"
+          alt="Logo" />
+        <div class="flex gap-4 mr-8">
+          <img class="xl:hidden" src="/assets/icon/shooping.svg" alt="User" />
+          <span
+            class="block mt-2 text-[#9B622F] text-4xl cursor-pointer xl:hidden">
+            <ion-icon class="" name="menu" onclick="Menu(this)"></ion-icon>
+            <ion-icon class="hidden" name="close"></ion-icon>
+          </span>
+        </div>
+        <nav
+          id="list-menu"
+          class="xl:mx-0 transition-opacity ease-in duration-200 opacity-0 xl:opacity-100 items-center text-center xl:text-left xl:px-0 xl:pr-[85px] py-4 xl:py-0 px-[85px] absolute top-[95px] z-10 xl:static bg-white shadow-md xl:shadow-none flex-col xl:flex-row flex justify-between w-full">
+          <ul
+            class="flex text-xl xl:text-base flex-col xl:flex-row gap-8 xl:gap-[65px]">
+            <li>Collections</li>
+            <li>Our Story</li>
+            <li>Blogs</li>
+          </ul>
+          <ul class="flex flex-col gap-4 mt-8 xl:flex-row xl:mt-0">
+            <li class="hidden xl:block">free delivery for orders above $199</li>
+            <li class="hidden xl:block">
+              <img src="/assets/icon/shooping.svg" alt="Shooping" />
+            </li>
+            <li><img src="/assets/icon/user.svg" alt="User" /></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="flex justify-center text-center lg:text-left lg:justify-between px-9 lg:px-0 items-center lg:pl-[85px] h-[566px] relative">
+        <img
+          class="absolute top-0 right-0 select-none"
+          src="/assets/image/pattern-1.png"
+          alt="Pattern 1" />
+        <img
+          class="absolute bottom-0 left-0 select-none"
+          src="/assets/image/pattern-2.png"
+          alt="Pattern 2" />
+        <div data-aos-duration="1000" data-aos="fade-right">
+          <p
+            class="relative lg:ml-11 uppercase after:absolute after:top-1/2 after:-translate-y-1/2 after:h-[1px] after:w-7 after:bg-black after:-left-10 after:hidden lg:after:block">
+            more than just jewellery
+          </p>
+          <h1 class="text-6xl font-playfair my-7">Elegance & Eternity.</h1>
+          <p class="mt-10 mb-8 text-sm text-gray-400 uppercase">
+            finely crafted lab-grown moissanite jewellery
+          </p>
+          <button class="uppercase bg-[#9B622F] px-6 py-2 text-white">
+            shop collections
+          </button>
+        </div>
+        <img
+          data-aos-duration="1000"
+          data-aos="fade-zoom-in"
+          class="hidden lg:block"
+          src="/assets/image/big-ring.png"
+          alt="Ring" />
+      </div>
+    </header>
+    <!-- End Hero Section -->
+
+    <main>
+      <!-- Benefits Section -->
+      <div class="flex flex-wrap justify-center gap-24 my-16 px-9">
+        <div data-aos-duration="1000" data-aos="fade-right" class="flex">
+          <img src="/assets/icon/bus.svg" alt="Bus" />
+          <div class="flex flex-col ml-4">
+            <strong class="uppercase">free delivery</strong>
+            <p class="text-gray-400">For orders over $199</p>
+          </div>
+        </div>
+        <div data-aos-duration="1000" data-aos="fade-right" class="flex">
+          <img src="/assets/icon/hand.svg" alt="Hand" />
+          <div class="flex flex-col ml-4">
+            <strong class="uppercase">30 days return</strong>
+            <p class="text-gray-400">No questions asked</p>
+          </div>
+        </div>
+        <div data-aos-duration="1000" data-aos="fade-left" class="flex">
+          <img src="/assets/icon/ethical.svg" alt="Ethical" />
+          <div class="flex flex-col ml-4">
+            <strong class="uppercase">ethically made</strong>
+            <p class="text-gray-400">From sustainable sources</p>
+          </div>
+        </div>
+        <div data-aos-duration="1000" data-aos="fade-left" class="flex">
+          <img src="/assets/icon/payment.svg" alt="Payment" />
+          <div class="flex flex-col ml-4">
+            <strong class="uppercase">secure payments</strong>
+            <p class="text-gray-400">For a seamless checkout</p>
+          </div>
+        </div>
+      </div>
+      <!-- End benefits section -->
+
+      <!-- Product Section -->
+      <section
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+        data-aos-duration="1000"
+        class="grid grid-cols-2 xl:grid-cols-4 mb-24 px-9 lg:px-[85px]">
+        <div
+          class="flex flex-col items-center col-start-1 col-end-3 p-5 bg-no-repeat bg-cover md:flex-row xl:col-start-1 xl:col-end-3 bg-bp1">
+          <img src="/assets/image/p1.png" alt="Product" />
+          <div class="uppercase">
+            <strong>new jewellery design</strong>
+            <a class="block text-center underline md:text-left" href="#"
+              >shop now</a
+            >
+          </div>
+        </div>
+        <div class="p-5 bg-no-repeat bg-cover bg-bp2">
+          <img class="mx-auto" src="/assets/image/p2.png" alt="Product" />
+          <div class="mt-[47px] text-center uppercase xl:text-start">
+            <strong>earrings collection</strong>
+            <a class="inline-block underline" href="#">shop now</a>
+          </div>
+        </div>
+        <div class="p-5 bg-no-repeat bg-cover bg-bp3">
+          <img class="mx-auto" src="/assets/image/p3.png" alt="Product" />
+          <div class="uppercase text-center xl:text-start mt-[47px]">
+            <strong>bracelets collection</strong>
+            <a class="inline-block underline" href="#">shop now</a>
+          </div>
+        </div>
+        <div class="p-5 bg-no-repeat bg-cover bg-bp4">
+          <img class="mx-auto" src="/assets/image/p4.png" alt="Product" />
+          <div class="uppercase text-center xl:text-start mt-[71px]">
+            <strong>bracelets collection</strong>
+            <a class="inline-block underline" href="#">shop now</a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center col-start-1 col-end-3 row-start-3 row-end-4 p-5 bg-no-repeat bg-cover md:flex-row xl:row-auto xl:col-start-2 xl:col-end-4 bg-bp5">
+          <img src="/assets/image/p5.png" alt="Product" />
+          <div class="uppercase">
+            <strong>rings collection</strong>
+            <a class="block text-center underline md:text-left" href="#"
+              >shop now</a
+            >
+          </div>
+        </div>
+        <div class="p-5 bg-no-repeat bg-cover bg-bp6">
+          <img class="mx-auto" src="/assets/image/p6.png" alt="Product" />
+          <div class="uppercase text-center xl:text-start mt-[48px]">
+            <strong>bracelets collection</strong>
+            <a class="inline-block underline" href="#">shop now</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Product Section -->
+
+      <!-- Testi Section -->
+      <section
+        class="flex flex-col-reverse items-center justify-center gap-4 mb-24 lg:gap-20 px-9 lg:flex-row">
+        <div
+          data-aos-duration="1000"
+          data-aos="fade-right"
+          class="max-w-[550px]">
+          <h2 class="mb-4 hidden lg:block text-[34px] font-playfair">
+            Luxury Defined By Style, Not Price.
+          </h2>
+          <p>
+            Moissanites are lab-grown gemstones, crafted by the most skilled
+            hands to create a sparkle that is a class of its own.
+          </p>
+          <p class="py-5">
+            Every piece of moissanite comes with a certification as a testament
+            to its quality. This gemstone is also durable, second only to
+            diamonds in terms of hardness. Hence, your fine jewellery pieces
+            from Le Diamonds cannot be easily scratched and keep their fire
+            well. Due to its hardness, we are also able to create dazzling cuts
+            that will shine brightly on you.
+          </p>
+          <p>
+            Our attention to quality and detail ensures that all our moissanite
+            jewellery is a work of art that you can be proud to wear.
+          </p>
+        </div>
+        <img
+          data-aos-duration="1000"
+          data-aos="fade-zoom-in"
+          class="w-full max-w-[550px]"
+          src="/assets/image/testi.png"
+          alt="Testi" />
+        <h2 class="lg:hidden text-[34px] font-playfair">
+          Luxury Defined By Style, Not Price.
+        </h2>
+      </section>
+      <!-- End Testi Section -->
+
+      <!-- Best Sell Product -->
+      <section class="flex gap-4 flex-col xl:flex-row mb-24 px-9 lg:px-[85px]">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-offset="0"
+          data-aos-duration="800"
+          class="bg-selling bg-cover text-center xl:text-left w-full bg-center bg-no-repeat xl:max-w-[412px] h-[518px] p-10">
+          <h2 class="text-[42px] font-playfair mb-5 tracking-tight">
+            Our Best Selling Products
+          </h2>
+          <button class="uppercase bg-[#9B622F] py-2 px-6 text-white">
+            shop collections
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-center lg:grid-cols-4">
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img class="mx-auto" src="/assets/image/ring.png" alt="Ring" />
+            <strong>stephane</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img
+              class="mx-auto"
+              src="/assets/image/earring.png"
+              alt="Earring" />
+            <strong>andree</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img class="mx-auto" src="/assets/image/ring.png" alt="Ring" />
+            <strong>stephane</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img
+              class="mx-auto"
+              src="/assets/image/earring.png"
+              alt="Earring" />
+            <strong>andree</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img
+              class="mx-auto"
+              src="/assets/image/earring.png"
+              alt="Earring" />
+            <strong>andree</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img class="mx-auto" src="/assets/image/ring.png" alt="Ring" />
+            <strong>stephane</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img
+              class="mx-auto"
+              src="/assets/image/earring.png"
+              alt="Earring" />
+            <strong>andree</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-delay="700"
+            class="bg-[#f2f2f2] min-h-[250px] uppercase">
+            <img class="mx-auto" src="/assets/image/ring.png" alt="Ring" />
+            <strong>stephane</strong>
+            <p class="mt-2 text-[14px] mb-2 text-gray-400">$866.00 - $994.00</p>
+          </div>
+        </div>
+      </section>
+      <!-- End Best Sell Product -->
+
+      <!-- Blog Section -->
+      <section
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+        data-aos-duration="500"
+        class="mb-24 px-9 lg:px-[85px] bg-[#f7f7f7] pt-9 pb-20">
+        <h2 class="text-5xl text-center font-playfair mb-9">Recent Blogs</h2>
+        <!-- Slider main container -->
+        <div class="swiper h-[482px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide bg-white h-[430px] relative">
+              <div
+                class="bg-[#242424] px-2 py-[6px] w-max absolute top-1/2 -translate-y-5 right-0 text-white text-xs">
+                MOISSANITE
+              </div>
+              <img
+                class="w-full max-h-[212px] mb-6"
+                src="/assets/image/blog1.png"
+                alt="Blog" />
+              <div class="px-[18px] border-b-[1px] pb-5">
+                <h3 class="mb-2 text-[15px] uppercase">
+                  CAN MOISSANITE BE YOUR NEXT ‘SUPERSTAR’ JEWELRY STONE?
+                </h3>
+                <p class="text-xs text-gray-400">
+                  In a world where diamonds are the traditional choice most
+                  especially when buying an engagement ring..
+                </p>
+              </div>
+              <p class="px-[18px] text-sm text-gray-400 mt-7">
+                May 25, 2022 <span class="px-3">|</span> by Admin
+              </p>
+            </div>
+            <div class="swiper-slide bg-white h-[430px] relative">
+              <div
+                class="bg-[#242424] px-2 py-[6px] w-max absolute top-1/2 -translate-y-5 right-0 text-white text-xs">
+                MOISSANITE
+              </div>
+              <img
+                class="w-full max-h-[212px] mb-6"
+                src="/assets/image/blog2.png"
+                alt="Blog" />
+              <div class="px-[18px] border-b-[1px] pb-5">
+                <h3 class="mb-2 text-[15px] uppercase">
+                  IS MOISSANITE MORE VALUABLE THAN A DIAMOND?
+                </h3>
+                <p class="text-xs text-gray-400">
+                  Are you a bride-to-be? Or are you that individual who is a
+                  jewelry lover? No matter what the case is..
+                </p>
+              </div>
+              <p class="px-[18px] text-sm text-gray-400 mt-7">
+                June 29, 2022 <span class="px-3">|</span> by Michael
+              </p>
+            </div>
+            <div class="swiper-slide bg-white h-[430px] relative">
+              <div
+                class="bg-[#242424] px-2 py-[6px] w-max absolute top-1/2 -translate-y-5 right-0 text-white text-xs">
+                MOISSANITE
+              </div>
+              <img
+                class="w-full max-h-[212px] mb-6"
+                src="/assets/image/blog3.png"
+                alt="Blog" />
+              <div class="px-[18px] border-b-[1px] pb-5">
+                <h3 class="mb-2 text-[15px] uppercase">
+                  ENGAGEMENT RING MOISSANITE SINGAPORE BUYING GUIDE
+                </h3>
+                <p class="text-xs text-gray-400">
+                  The setting of your Moissanite rings is as unique as your
+                  personality. If you’re looking for an what the case is..
+                </p>
+              </div>
+              <p class="px-[18px] text-sm text-gray-400 mt-7">
+                June 14, 2022 <span class="px-3">|</span> by Michael
+              </p>
+            </div>
+            <div class="swiper-slide bg-white h-[430px] relative">
+              <div
+                class="bg-[#242424] px-2 py-[6px] w-max absolute top-1/2 -translate-y-5 right-0 text-white text-xs">
+                MOISSANITE
+              </div>
+              <img
+                class="w-full max-h-[212px] mb-6"
+                src="/assets/image/blog4.png"
+                alt="Blog" />
+              <div class="px-[18px] border-b-[1px] pb-5">
+                <h3 class="mb-2 text-[15px] uppercase">
+                  Luxury Defined By Style, Not Price SINGAPORE BUYING GUIDE
+                </h3>
+                <p class="text-xs text-gray-400">
+                  Moissanites are lab-grown gemstones, crafted by the most
+                  skilled hands to create a sparkle that is personality. If
+                  you’re...
+                </p>
+              </div>
+              <p class="px-[18px] text-sm text-gray-400 mt-7">
+                27 September 2022 <span class="px-3">|</span> by Admin
+              </p>
+            </div>
+
+            <div class="swiper-slide bg-white h-[430px] relative">
+              <div
+                class="bg-[#242424] px-2 py-[6px] w-max absolute top-1/2 -translate-y-5 right-0 text-white text-xs">
+                MOISSANITE
+              </div>
+              <img
+                class="w-full max-h-[212px] mb-6"
+                src="/assets/image/blog1.png"
+                alt="Blog" />
+              <div class="px-[18px] border-b-[1px] pb-5">
+                <h3 class="mb-2 text-[15px] uppercase">
+                  CAN MOISSANITE BE YOUR NEXT ‘SUPERSTAR’ JEWELRY STONE?
+                </h3>
+                <p class="text-xs text-gray-400">
+                  Moissanites are lab-grown gemstones, crafted by the most
+                  skilled hands to create a sparkle that is personality. If
+                  you’re...
+                </p>
+              </div>
+              <p class="px-[18px] text-sm text-gray-400 mt-7">
+                May 25, 2022 <span class="px-3">|</span> by Admin
+              </p>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- End Blog Section -->
+
+      <!-- Inspired Section -->
+      <section
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+        data-aos-duration="500"
+        class="px-9 lg:px-[85px] mb-24">
+        <h2 class="text-5xl text-center font-playfair">Get Inspired</h2>
+        <p class="flex gap-[6px] justify-center my-6 font-bold">
+          Follow us at
+          <img src="/assets/icon/instagram.svg" alt="Instagram" />
+          <span class="text-[#9B622F]">le_diamonds</span>
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper h-[300px]">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-1.png"
+              alt="Inspired" />
+
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-2.png"
+              alt="Inspired" />
+
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-3.png"
+              alt="Inspired" />
+
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-4.png"
+              alt="Inspired" />
+
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-5.png"
+              alt="Inspired" />
+
+            <img
+              class="swiper-slide max-h-[248px]"
+              src="/assets/image/inspired-5.png"
+              alt="Inspired" />
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- End Inspired Section -->
+
+      <!-- Popup -->
+      <div
+        data-aos="fade-zoom-in"
+        data-aos-offset="0"
+        data-aos-duration="500"
+        class="bg-[#9B622F] py-7 flex gap-6 px-9 lg:gap-11 flex-wrap text-white justify-center items-center">
+        <h3
+          class="font-bold uppercase border-r-2 text-[28px] border-white pr-11">
+          free delivery
+        </h3>
+        <p>For orders over $199</p>
+        <button class="px-6 py-2 uppercase bg-white font-bold text-[#9B622F]">
+          shop collections
+        </button>
+      </div>
+      <!-- End Popup -->
+
+      <!-- Footer -->
+      <footer
+        class="px-9 lg:px-[85px] flex flex-col lg:flex-row py-16 bg-[#222224] text-white">
+        <div class="mr-[92px]">
+          <h2 class="mb-6 uppercase font-playfair text-[28px]">le diamonds</h2>
+          <p class="lg:w-[31ch] mb-4">
+            With Le Diamonds, we hope to empower and inspire women of all ages,
+            giving them the courage and confidence to power through each day
+            with their choice of elegant and charming contemporary jewellery.
+          </p>
+          <img src="/assets/image/pay.png" alt="Pay" />
+        </div>
+        <div class="flex gap-[90px] mt-8 lg:mt-0 flex-wrap">
+          <div>
+            <h3 class="mb-6 text-sm font-bold uppercase">collection</h3>
+            <ul class="flex flex-col gap-2">
+              <li>Rings</li>
+              <li>Earrings</li>
+              <li>Necklaces</li>
+              <li>Bracelets</li>
+              <li>Pendants</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-sm font-bold uppercase">INFORMATION</h3>
+            <ul class="flex flex-col gap-2">
+              <li>FAQ</li>
+              <li>Help & Support</li>
+              <li>Terms of Service</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-sm font-bold uppercase">know more</h3>
+            <ul class="flex flex-col gap-2">
+              <li>All about clarities</li>
+              <li>Partnerships</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-6 text-sm font-bold uppercase">CONTACT INFO</h3>
+            <ul class="flex flex-col gap-2">
+              <li>(+603) 95441361</li>
+              <li>info@lediamonds.com</li>
+              <li class="flex gap-4 ml-2">
+                <img src="/assets/icon/fb-white.svg" alt="Facebook" />
+                <img src="/assets/icon/ig-white.svg" alt="Instagram" />
+              </li>
+            </ul>
+          </div>
+          <p class="self-end mx-auto lg:mx-0 lg:ml-auto">
+            ©2022 Le Diamonds - All Rights Reserved
+          </p>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </main>
+  </body>
+</html>
