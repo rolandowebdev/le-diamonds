@@ -941,31 +941,31 @@ body {
 }
 
 .bg-bp1 {
-  background-image: url('/background/bp1.png');
+  background-image: url('/src/background/bp1.png');
 }
 
 .bg-bp2 {
-  background-image: url('/background/bp2.png');
+  background-image: url('/src/background/bp2.png');
 }
 
 .bg-bp3 {
-  background-image: url('/background/bp3.png');
+  background-image: url('/src/background/bp3.png');
 }
 
 .bg-bp4 {
-  background-image: url('/background/bp4.png');
+  background-image: url('/src/background/bp4.png');
 }
 
 .bg-bp5 {
-  background-image: url('/background/bp5.png');
+  background-image: url('/src/background/bp5.png');
 }
 
 .bg-bp6 {
-  background-image: url('/background/bp6.png');
+  background-image: url('/src/background/bp6.png');
 }
 
 .bg-selling {
-  background-image: url('/background/bg-selling.png');
+  background-image: url('/src/background/bg-selling.png');
 }
 
 .bg-cover {
